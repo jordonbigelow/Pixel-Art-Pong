@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://cm7uiog0in8pp"]
+[gd_scene load_steps=2 format=3 uid="uid://cm7uiog0in8pp"]
+
+[ext_resource type="PackedScene" uid="uid://cfmwmtcfngcle" path="res://scenes/paddle.tscn" id="1_xdxgb"]
 
 [node name="Game Scene" type="Node"]
+
+[node name="Player 1 Paddle" parent="." instance=ExtResource("1_xdxgb")]
+position = Vector2(211, 237)
+scale = Vector2(4, 4)
+player_number = 1
+
+[node name="Player 2 Paddle" parent="." instance=ExtResource("1_xdxgb")]
+position = Vector2(837, 233)
+scale = Vector2(4, 4)
+player_number = 2
+
+[node name="Player 1 Score" type="Label" parent="."]
+offset_left = 187.0
+offset_top = 11.0
+offset_right = 227.0
+offset_bottom = 34.0
+text = "Score Player 1 "
+
+[node name="Player 2 Score" type="Label" parent="."]
+offset_left = 771.0
+offset_top = 8.0
+offset_right = 884.0
+offset_bottom = 31.0
+text = "Score Player 2"
