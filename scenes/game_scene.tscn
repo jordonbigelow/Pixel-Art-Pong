@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cm7uiog0in8pp"]
+[gd_scene load_steps=3 format=3 uid="uid://cm7uiog0in8pp"]
 
 [ext_resource type="PackedScene" uid="uid://cfmwmtcfngcle" path="res://scenes/paddle.tscn" id="1_xdxgb"]
+[ext_resource type="PackedScene" uid="uid://fj4dgf41rbni" path="res://scenes/ball.tscn" id="2_5aibe"]
 
 [node name="Game Scene" type="Node"]
 
@@ -27,3 +28,12 @@ offset_top = 8.0
 offset_right = 884.0
 offset_bottom = 31.0
 text = "Score Player 2"
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(538, 19, 538, 640)
+width = 2.0
+default_color = Color(0.400698, 0.400698, 0.400698, 1)
+
+[node name="Ball" parent="." instance=ExtResource("2_5aibe")]
+position = Vector2(501, 151)
+scale = Vector2(4, 4)
