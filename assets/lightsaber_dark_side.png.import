@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ntqt7hsjofd"
-path="res://.godot/imported/pong_ball.png-3e231e0d11ab5a8ab6eaedfe0eeb8a8d.ctex"
+uid="uid://dbni0yh377hb6"
+path="res://.godot/imported/lightsaber_dark_side.png-d4a9b71308075bd5ec956cd5ed0e208e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pong_ball.png"
-dest_files=["res://.godot/imported/pong_ball.png-3e231e0d11ab5a8ab6eaedfe0eeb8a8d.ctex"]
+source_file="res://assets/lightsaber_dark_side.png"
+dest_files=["res://.godot/imported/lightsaber_dark_side.png-d4a9b71308075bd5ec956cd5ed0e208e.ctex"]
 
 [params]
 

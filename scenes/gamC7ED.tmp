@@ -47,24 +47,20 @@ default_color = Color(0.400698, 0.400698, 0.400698, 1)
 position = Vector2(530, 200)
 gravity_scale = 0.0
 
-[node name="Player 1 Back Wall" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Left Wall" type="CollisionShape2D" parent="Player 1 Back Wall"]
+[node name="Left Wall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 360)
 shape = SubResource("RectangleShape2D_7sref")
 
-[node name="Player 2 Back Wall" type="StaticBody2D" parent="."]
-
-[node name="Right Wall" type="CollisionShape2D" parent="Player 2 Back Wall"]
+[node name="Right Wall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1272, 360)
 shape = SubResource("RectangleShape2D_7sref")
 
-[node name="Top and Bottom Wall" type="StaticBody2D" parent="."]
-
-[node name="Top Wall" type="CollisionShape2D" parent="Top and Bottom Wall"]
+[node name="Top Wall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(635.5, 0)
 shape = SubResource("RectangleShape2D_rmlub")
 
-[node name="Bottom Wall" type="CollisionShape2D" parent="Top and Bottom Wall"]
+[node name="Bottom Wall" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(635, 711)
 shape = SubResource("RectangleShape2D_rmlub")
