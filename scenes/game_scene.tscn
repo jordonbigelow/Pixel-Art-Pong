@@ -37,8 +37,8 @@ offset_right = 981.0
 offset_bottom = 41.0
 text = "Score Player 2"
 
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(70, 32)
+[node name="Net" type="Line2D" parent="."]
+position = Vector2(98, 26)
 points = PackedVector2Array(538, 19, 538, 640)
 width = 2.0
 default_color = Color(0.400698, 0.400698, 0.400698, 1)
