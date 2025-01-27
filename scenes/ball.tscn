@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_h7477"]
 [ext_resource type="Texture2D" uid="uid://oow0dw2hxjgn" path="res://assets/r2d2.png" id="2_3eoh6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wy86"]
-size = Vector2(1.2e+06, 1.4e+06)
+[sub_resource type="CircleShape2D" id="CircleShape2D_auqs1"]
+radius = 800000.0
 
 [node name="Ball" type="RigidBody2D"]
 script = ExtResource("1_h7477")
@@ -14,6 +14,5 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_3eoh6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
 scale = Vector2(1e-05, 1e-05)
-shape = SubResource("RectangleShape2D_0wy86")
+shape = SubResource("CircleShape2D_auqs1")
