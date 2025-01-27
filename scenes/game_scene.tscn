@@ -14,7 +14,7 @@ size = Vector2(1289, 20)
 script = ExtResource("1_ys3ak")
 
 [node name="Player 1 Paddle" parent="." instance=ExtResource("1_xdxgb")]
-position = Vector2(321, 357)
+position = Vector2(321, 346)
 scale = Vector2(4, 4)
 player_number = 1
 
