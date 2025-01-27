@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-
 @export var speed = 300.0
 @export var player_number: int
 
-
-func _physics_process(delta: float) -> void:
+	
+func _physics_process(_delta: float) -> void:
 	if player_number == 1:
 		if Input.is_action_just_pressed("p1_move_up"):
 			velocity.y -= 1
