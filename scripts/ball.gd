@@ -1,15 +1,16 @@
 extends RigidBody2D
 
-const SPEED: float = 250
+@export var speed: float = 250
 var velocity: Vector2
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	velocity = Vector2(-SPEED, randi_range(100, 150))
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	velocity = Vector2(-speed, randi_range(100, 150))
+	
+	
 func _physics_process(delta: float) -> void:
-	var scaled_velocity = velocity * delta
-	var collision := move_and_collide(scaled_velocity)
+	var scaled_velocity: Vector2 = velocity * delta
+	var collision: KinematicCollision2D = move_and_collide(scaled_velocity)
 	
 	if collision:
 		if collision.get_collider_id() == 30198990121:
@@ -23,5 +24,5 @@ func _physics_process(delta: float) -> void:
 		elif collision.get_collider_id() == 30014440717:
 			Globals.player_2_score += 1
 			
-		var normal := collision.get_normal()
+		var normal: Vector2 = collision.get_normal()
 		velocity = velocity.bounce(normal)
