@@ -7,7 +7,7 @@ var velocity: Vector2
 func _ready() -> void:
 	velocity = Vector2(-SPEED, randi_range(100, 150))
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var scaled_velocity = velocity * delta
 	var collision := move_and_collide(scaled_velocity)
 	
