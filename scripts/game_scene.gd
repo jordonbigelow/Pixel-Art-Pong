@@ -26,9 +26,15 @@ func _on_player_one_back_wall_body_entered(body: Node2D) -> void:
 	Globals.player_2_score += 1
 	body.queue_free()
 	$ResetTimer._reset_timer()
+	play_scored_sound()
 	
 
 func _on_player_two_back_wall_body_entered(body: Node2D) -> void:
 	Globals.player_1_score +=1
 	body.queue_free()
 	$ResetTimer._reset_timer()
+	play_scored_sound()
+	
+	
+func play_scored_sound() -> void:
+	$AudioStreamPlayer2D.play(1.20)
