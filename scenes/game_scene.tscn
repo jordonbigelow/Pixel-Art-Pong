@@ -15,7 +15,7 @@ font_size = 48
 size = Vector2(1289, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7sref"]
-size = Vector2(20, 722)
+size = Vector2(20, 682.5)
 
 [node name="Game Scene" type="Node"]
 script = ExtResource("1_ys3ak")
@@ -66,13 +66,13 @@ shape = SubResource("RectangleShape2D_rmlub")
 [node name="PlayerOneBackWall" type="Area2D" parent="."]
 
 [node name="Left Wall" type="CollisionShape2D" parent="PlayerOneBackWall"]
-position = Vector2(0, 360)
+position = Vector2(0, 355.5)
 shape = SubResource("RectangleShape2D_7sref")
 
 [node name="PlayerTwoBackWall" type="Area2D" parent="."]
 
 [node name="Right Wall" type="CollisionShape2D" parent="PlayerTwoBackWall"]
-position = Vector2(1272, 360)
+position = Vector2(1270, 354)
 shape = SubResource("RectangleShape2D_7sref")
 
 [node name="ResetButton" type="Button" parent="."]
