@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbni0yh377hb6"
-path="res://.godot/imported/lightsaber_dark_side.png-d4a9b71308075bd5ec956cd5ed0e208e.ctex"
+uid="uid://dt4sx53stnw68"
+path="res://.godot/imported/ball.png-b34a2514136f214417d068c9f6af41fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lightsaber_dark_side.png"
-dest_files=["res://.godot/imported/lightsaber_dark_side.png-d4a9b71308075bd5ec956cd5ed0e208e.ctex"]
+source_file="res://assets/ball/ball.png"
+dest_files=["res://.godot/imported/ball.png-b34a2514136f214417d068c9f6af41fc.ctex"]
 
 [params]
 

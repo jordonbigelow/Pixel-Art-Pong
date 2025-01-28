@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhi3n8ucf2sux"
-path="res://.godot/imported/lightsaber_jedi_side.png-db3cb9dc49dae4ff5fd065982f2d4efa.ctex"
+uid="uid://c4lyu6rp6es2h"
+path="res://.godot/imported/p1_paddle.png-1bf24065df3a3d1946b84f6bb3daf132.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lightsaber_jedi_side.png"
-dest_files=["res://.godot/imported/lightsaber_jedi_side.png-db3cb9dc49dae4ff5fd065982f2d4efa.ctex"]
+source_file="res://assets/paddles/p1_paddle.png"
+dest_files=["res://.godot/imported/p1_paddle.png-1bf24065df3a3d1946b84f6bb3daf132.ctex"]
 
 [params]
 
