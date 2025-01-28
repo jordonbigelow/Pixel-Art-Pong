@@ -17,3 +17,5 @@
 - I plan to continue to polish this up
 - I want to maybe add power ups the ball can run into
 - I want to add soundFX, a background, and maybe some particle effects if I'm feeling spicy
+- I would like for the player to be able to customize their paddle, and maybe the ball, and add some kind of start screen
+- Eventually if I don't give up, I may add data persistance to keep track of people's scores and whatnot
