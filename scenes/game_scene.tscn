@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cm7uiog0in8pp"]
+[gd_scene load_steps=11 format=3 uid="uid://cm7uiog0in8pp"]
 
 [ext_resource type="PackedScene" uid="uid://cfmwmtcfngcle" path="res://scenes/paddle.tscn" id="1_xdxgb"]
 [ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_ys3ak"]
 [ext_resource type="PackedScene" uid="uid://fj4dgf41rbni" path="res://scenes/ball.tscn" id="2_5aibe"]
 [ext_resource type="PackedScene" uid="uid://cpqd8cf4dsrwm" path="res://scenes/reset_timer.tscn" id="4_tu33m"]
 [ext_resource type="AudioStream" uid="uid://boquctxtocr5e" path="res://assets/sound_effects/Noise Crush_1.wav" id="5_ot0ib"]
+[ext_resource type="AudioStream" uid="uid://r3en4g613ef5" path="res://assets/sound_effects/Whimsical Tines Improv_1.wav" id="6_g41lw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mix4f"]
 font_size = 48
@@ -86,9 +87,14 @@ text = "Reset
 
 [node name="ResetTimer" parent="." instance=ExtResource("4_tu33m")]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="PlayerScored" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_ot0ib")
 
+[node name="PlayerWon" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_g41lw")
+
+[connection signal="player_1_won" from="." to="." method="_on_player_1_won"]
+[connection signal="player_2_won" from="." to="." method="_on_player_2_won"]
 [connection signal="body_entered" from="PlayerOneBackWall" to="." method="_on_player_one_back_wall_body_entered"]
 [connection signal="body_entered" from="PlayerTwoBackWall" to="." method="_on_player_two_back_wall_body_entered"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
