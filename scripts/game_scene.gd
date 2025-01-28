@@ -5,7 +5,7 @@ extends Node
 @onready var player_1_score: Label = $"Player 1 Score"
 @onready var player_2_score: Label = $"Player 2 Score"
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	player_1_paddle.texture = load("res://assets/lightsaber_jedi_side.png")
 	player_2_paddle.texture = load("res://assets/lightsaber_dark_side.png")
@@ -13,7 +13,6 @@ func _ready() -> void:
 	player_2_score.text = str(Globals.player_2_score)
 	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	player_1_score.text = str(Globals.player_1_score)
 	player_2_score.text = str(Globals.player_2_score)
