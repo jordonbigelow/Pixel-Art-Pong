@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpqd8cf4dsrwm"]
+
+[ext_resource type="Script" path="res://scenes/reset_timer.gd" id="1_yamgj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eyts0"]
+font_size = 48
+
+[node name="ResetTimer" type="Timer"]
+script = ExtResource("1_yamgj")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.5
+offset_right = 44.5
+offset_bottom = 67.0
+grow_horizontal = 2
+text = "test"
+label_settings = SubResource("LabelSettings_eyts0")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
