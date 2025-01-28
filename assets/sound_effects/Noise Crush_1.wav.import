@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://boquctxtocr5e"
+path="res://.godot/imported/Noise Crush_1.wav-ec1eb3fa3c8d53d4d2b9f2f90f0fbdeb.sample"
+
+[deps]
+
+source_file="res://assets/sound_effects/Noise Crush_1.wav"
+dest_files=["res://.godot/imported/Noise Crush_1.wav-ec1eb3fa3c8d53d4d2b9f2f90f0fbdeb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
