@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_h7477"]
 [ext_resource type="Texture2D" uid="uid://dt4sx53stnw68" path="res://assets/ball/ball.png" id="2_eshpd"]
-[ext_resource type="AudioStream" uid="uid://lx261ve066kq" path="res://Level Up_2.wav" id="3_rl7uu"]
+[ext_resource type="AudioStream" uid="uid://lx261ve066kq" path="res://assets/sound_effects/Level Up_2.wav" id="3_rl7uu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_auqs1"]
 radius = 800000.0
