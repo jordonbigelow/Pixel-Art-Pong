@@ -24,18 +24,16 @@ scale = Vector2(4, 4)
 player_number = 2
 
 [node name="Player 1 Score" type="Label" parent="."]
-offset_left = 163.0
-offset_top = 18.0
-offset_right = 276.0
-offset_bottom = 41.0
-text = "Score Player 1 "
+offset_left = 321.0
+offset_top = 24.0
+offset_right = 434.0
+offset_bottom = 47.0
 
 [node name="Player 2 Score" type="Label" parent="."]
-offset_left = 868.0
+offset_left = 941.0
 offset_top = 18.0
-offset_right = 981.0
+offset_right = 1054.0
 offset_bottom = 41.0
-text = "Score Player 2"
 
 [node name="Net" type="Line2D" parent="."]
 position = Vector2(98, 26)
