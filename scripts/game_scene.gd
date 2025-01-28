@@ -19,18 +19,16 @@ func _process(_delta: float) -> void:
 
 
 func _on_reset_button_pressed() -> void:
-	$ResetTimer.reset_timer()
+	$ResetTimer._reset_timer()
 		
 	
 func _on_player_one_back_wall_body_entered(body: Node2D) -> void:
 	Globals.player_2_score += 1
 	body.queue_free()
-	$ResetTimer.reset_timer()
+	$ResetTimer._reset_timer()
 	
 
 func _on_player_two_back_wall_body_entered(body: Node2D) -> void:
 	Globals.player_1_score +=1
 	body.queue_free()
-	$ResetTimer.reset_timer()
-
-	
+	$ResetTimer._reset_timer()
