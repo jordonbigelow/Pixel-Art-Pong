@@ -14,5 +14,5 @@ func _on_started() -> void:
 	$Label.visible = true 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Label.text = "Restart in... " + str(round($".".time_left))
