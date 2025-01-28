@@ -23,6 +23,10 @@ Globals="*res://scripts/globals.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[editor]
+
+movie_writer/movie_file="/Users/jordon/Godot Game Dev Projects/Pixel-Art-Pong/screen_captures/move_file.wav"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-vim/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
