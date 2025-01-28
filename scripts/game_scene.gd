@@ -30,7 +30,7 @@ func _on_player_one_back_wall_body_entered(body: Node2D) -> void:
 	body.queue_free()
 	
 	if check_if_player_won(Globals.player_1_score, Globals.player_2_score):
-		player_1_won.emit()	
+		player_2_won.emit()	
 	else:
 		$ResetTimer._reset_timer()
 		
@@ -54,9 +54,9 @@ func play_scored_sound() -> void:
 	
 	
 func check_if_player_won(p1_score: int, p2_score: int) -> bool:
-	if p1_score >= Globals.MAX_SCORE and p1_score > p2_score + 2:
+	if p1_score >= Globals.MAX_SCORE and p1_score > p2_score + 1:
 		return true
-	if p2_score >= Globals.MAX_SCORE and p2_score > p1_score + 2:
+	if p2_score >= Globals.MAX_SCORE and p2_score > p1_score + 1:
 		return true
 	else:
 		return false
@@ -64,8 +64,12 @@ func check_if_player_won(p1_score: int, p2_score: int) -> bool:
 
 func _on_player_1_won() -> void:
 	$PlayerWon.play(0.2)
+	$PlayerWonLabel.text = "Player 1 is the Winner!"
+	$PlayerWonLabel.visible = true
 	#get_tree().paused = true
 
 func _on_player_2_won() -> void:
 	$PlayerWon.play(0.2)
+	$PlayerWonLabel.text = "Player 2 is the Winner!"
+	$PlayerWonLabel.visible = true
 	#get_tree().paused = true
