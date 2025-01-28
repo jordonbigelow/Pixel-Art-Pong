@@ -52,7 +52,7 @@ width = 2.0
 default_color = Color(0.400698, 0.400698, 0.400698, 1)
 
 [node name="Ball" parent="." instance=ExtResource("2_5aibe")]
-position = Vector2(530, 200)
+position = Vector2(638, 198)
 gravity_scale = 0.0
 
 [node name="Top and Bottom Wall" type="StaticBody2D" parent="."]
