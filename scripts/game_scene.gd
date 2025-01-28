@@ -7,8 +7,8 @@ extends Node
 
 
 func _ready() -> void:
-	player_1_paddle.texture = load("res://assets/lightsaber_jedi_side.png")
-	player_2_paddle.texture = load("res://assets/lightsaber_dark_side.png")
+	player_1_paddle.texture = load("res://assets/paddles/p1_paddle.png")
+	player_2_paddle.texture = load("res://assets/paddles/p2_paddle.png")
 	player_1_score.text = str(Globals.player_1_score)
 	player_2_score.text = str(Globals.player_2_score)
 	
