@@ -24,11 +24,13 @@ func _on_reset_button_pressed() -> void:
 	
 func _on_player_one_back_wall_body_entered(body: RigidBody2D) -> void:
 	Globals.player_2_score += 1
+	$Ball.queue_free()
 	reset_timer()
 	
 
 func _on_player_two_back_wall_body_entered(body: RigidBody2D) -> void:
 	Globals.player_1_score +=1
+	$Ball.queue_free()
 	reset_timer()
 
 
