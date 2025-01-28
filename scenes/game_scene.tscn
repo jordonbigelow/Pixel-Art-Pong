@@ -10,11 +10,11 @@ font_size = 48
 [sub_resource type="LabelSettings" id="LabelSettings_6y5gc"]
 font_size = 48
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sref"]
-size = Vector2(20, 722)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmlub"]
 size = Vector2(1289, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sref"]
+size = Vector2(20, 722)
 
 [node name="Game Scene" type="Node"]
 script = ExtResource("1_ys3ak")
@@ -44,7 +44,8 @@ offset_bottom = 41.0
 label_settings = SubResource("LabelSettings_6y5gc")
 
 [node name="Net" type="Line2D" parent="."]
-position = Vector2(98, 26)
+position = Vector2(-572, 26)
+scale = Vector2(2.25, 1)
 points = PackedVector2Array(538, 19, 538, 640)
 width = 2.0
 default_color = Color(0.400698, 0.400698, 0.400698, 1)
@@ -52,18 +53,6 @@ default_color = Color(0.400698, 0.400698, 0.400698, 1)
 [node name="Ball" parent="." instance=ExtResource("2_5aibe")]
 position = Vector2(530, 200)
 gravity_scale = 0.0
-
-[node name="Player 1 Back Wall" type="StaticBody2D" parent="."]
-
-[node name="Left Wall" type="CollisionShape2D" parent="Player 1 Back Wall"]
-position = Vector2(0, 360)
-shape = SubResource("RectangleShape2D_7sref")
-
-[node name="Player 2 Back Wall" type="StaticBody2D" parent="."]
-
-[node name="Right Wall" type="CollisionShape2D" parent="Player 2 Back Wall"]
-position = Vector2(1272, 360)
-shape = SubResource("RectangleShape2D_7sref")
 
 [node name="Top and Bottom Wall" type="StaticBody2D" parent="."]
 
@@ -74,3 +63,18 @@ shape = SubResource("RectangleShape2D_rmlub")
 [node name="Bottom Wall" type="CollisionShape2D" parent="Top and Bottom Wall"]
 position = Vector2(635, 711)
 shape = SubResource("RectangleShape2D_rmlub")
+
+[node name="PlayerOneBackWall" type="Area2D" parent="."]
+
+[node name="Left Wall" type="CollisionShape2D" parent="PlayerOneBackWall"]
+position = Vector2(0, 360)
+shape = SubResource("RectangleShape2D_7sref")
+
+[node name="PlayerTwoBackWall" type="Area2D" parent="."]
+
+[node name="Right Wall" type="CollisionShape2D" parent="PlayerTwoBackWall"]
+position = Vector2(1272, 360)
+shape = SubResource("RectangleShape2D_7sref")
+
+[connection signal="body_entered" from="PlayerOneBackWall" to="Ball" method="_on_player_one_back_wall_body_entered"]
+[connection signal="body_entered" from="PlayerTwoBackWall" to="Ball" method="_on_player_two_back_wall_body_entered"]
