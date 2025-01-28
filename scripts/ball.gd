@@ -15,11 +15,3 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var normal: Vector2 = collision.get_normal()
 		velocity = velocity.bounce(normal)
-
-
-func _on_player_one_back_wall_body_entered(body: Node2D) -> void:
-	Globals.player_2_score += 1
-
-
-func _on_player_two_back_wall_body_entered(body: Node2D) -> void:
-	Globals.player_1_score += 1
