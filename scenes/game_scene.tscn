@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cm7uiog0in8pp"]
+[gd_scene load_steps=9 format=3 uid="uid://cm7uiog0in8pp"]
 
 [ext_resource type="PackedScene" uid="uid://cfmwmtcfngcle" path="res://scenes/paddle.tscn" id="1_xdxgb"]
 [ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_ys3ak"]
 [ext_resource type="PackedScene" uid="uid://fj4dgf41rbni" path="res://scenes/ball.tscn" id="2_5aibe"]
+[ext_resource type="PackedScene" uid="uid://cpqd8cf4dsrwm" path="res://scenes/reset_timer.tscn" id="4_tu33m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mix4f"]
 font_size = 48
@@ -76,5 +77,15 @@ shape = SubResource("RectangleShape2D_7sref")
 position = Vector2(1272, 360)
 shape = SubResource("RectangleShape2D_7sref")
 
-[connection signal="body_entered" from="PlayerOneBackWall" to="Ball" method="_on_player_one_back_wall_body_entered"]
-[connection signal="body_entered" from="PlayerTwoBackWall" to="Ball" method="_on_player_two_back_wall_body_entered"]
+[node name="ResetButton" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 25.0
+offset_right = 153.0
+offset_bottom = 74.0
+text = "Reset"
+
+[node name="ResetTimer" parent="." instance=ExtResource("4_tu33m")]
+
+[connection signal="body_entered" from="PlayerOneBackWall" to="." method="_on_player_one_back_wall_body_entered"]
+[connection signal="body_entered" from="PlayerTwoBackWall" to="." method="_on_player_two_back_wall_body_entered"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
