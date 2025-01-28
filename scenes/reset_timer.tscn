@@ -9,6 +9,7 @@ font_size = 48
 script = ExtResource("1_yamgj")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -16,7 +17,7 @@ offset_left = -44.5
 offset_right = 44.5
 offset_bottom = 67.0
 grow_horizontal = 2
-text = "test"
 label_settings = SubResource("LabelSettings_eyts0")
 
+[connection signal="started" from="." to="." method="_on_started"]
 [connection signal="timeout" from="." to="." method="_on_timeout"]
