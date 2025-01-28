@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="1_vikmw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w2hr"]
-size = Vector2(1, 8)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2bqli"]
+radius = 2.0
+height = 33.0
 
 [node name="Paddle" type="CharacterBody2D"]
 motion_mode = 1
@@ -14,4 +15,4 @@ scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)
-shape = SubResource("RectangleShape2D_3w2hr")
+shape = SubResource("CapsuleShape2D_2bqli")
