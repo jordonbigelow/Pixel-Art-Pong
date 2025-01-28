@@ -15,3 +15,4 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var normal: Vector2 = collision.get_normal()
 		velocity = velocity.bounce(normal)
+		$AudioStreamPlayer2D.play(0.0)
