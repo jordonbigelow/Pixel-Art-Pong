@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf143brtic3qp"]
+[gd_scene load_steps=7 format=3 uid="uid://cf143brtic3qp"]
 
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_p4xva"]
 
@@ -12,6 +12,9 @@ default_font_size = 32
 default_font_size = 32
 
 [sub_resource type="Theme" id="Theme_y10mk"]
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_hylpk"]
 default_font_size = 32
 
 [node name="StartScreen" type="Control"]
@@ -75,5 +78,16 @@ offset_bottom = 703.0
 theme = SubResource("Theme_y10mk")
 text = "Settings"
 
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 16.0
+offset_right = 1265.0
+offset_bottom = 69.0
+theme = SubResource("Theme_hylpk")
+text = "Exit
+"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
