@@ -76,3 +76,4 @@ theme = SubResource("Theme_y10mk")
 text = "Settings"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HowToPlay" to="." method="_on_how_to_play_pressed"]
