@@ -110,8 +110,17 @@ grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_7ocg8")
 
+[node name="BackButton" type="Button" parent="."]
+visible = false
+offset_left = 25.0
+offset_top = 631.0
+offset_right = 171.0
+offset_bottom = 687.0
+text = "Back to Start Screen"
+
 [connection signal="player_1_won" from="." to="." method="_on_player_1_won"]
 [connection signal="player_2_won" from="." to="." method="_on_player_2_won"]
 [connection signal="body_entered" from="PlayerOneBackWall" to="." method="_on_player_one_back_wall_body_entered"]
 [connection signal="body_entered" from="PlayerTwoBackWall" to="." method="_on_player_two_back_wall_body_entered"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

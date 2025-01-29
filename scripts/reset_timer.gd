@@ -20,4 +20,4 @@ func reset_timer() -> void:
 
 
 func _process(_delta: float) -> void:
-	$Label.text = "Restart in... " + str(round($".".time_left))
+	$Label.text = "Get Ready in... " + str(round($".".time_left))
