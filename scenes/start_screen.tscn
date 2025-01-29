@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf143brtic3qp"]
+
+[ext_resource type="Script" path="res://scenes/start_screen.gd" id="1_vaiy6"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vaiy6")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 294.0
+offset_right = 624.0
+offset_bottom = 325.0
+text = "Play Pong
+"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 346.0
+offset_right = 618.0
+offset_bottom = 377.0
+text = "Settings"
+
+[node name="Customize" type="Button" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 410.0
+offset_right = 645.0
+offset_bottom = 441.0
+text = "Customize
+"
