@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_reset_button_pressed() -> void:
-	$ResetTimer._reset_timer()
+	$ResetTimer.reset_timer()
 		
 	
 func _on_player_one_back_wall_body_entered(body: Node2D) -> void:
@@ -34,7 +34,7 @@ func _on_player_one_back_wall_body_entered(body: Node2D) -> void:
 	if check_if_player_won(Globals.player_1_score, Globals.player_2_score):
 		player_2_won.emit()	
 	else:
-		$ResetTimer._reset_timer()
+		$ResetTimer.reset_timer()
 		
 	play_scored_sound()
 	
@@ -46,7 +46,7 @@ func _on_player_two_back_wall_body_entered(body: Node2D) -> void:
 	if check_if_player_won(Globals.player_1_score, Globals.player_2_score):	
 		player_1_won.emit()
 	else:
-		$ResetTimer._reset_timer()
+		$ResetTimer.reset_timer()
 		
 	play_scored_sound()
 	
@@ -69,7 +69,6 @@ func _on_player_1_won() -> void:
 	$PlayerWonLabel.text = "Player 1 is the Winner!"
 	$PlayerWonLabel.visible = true
 	$ResetButton.visible = false
-	$BackButton.visible = true
 	
 	
 func _on_player_2_won() -> void:
@@ -77,7 +76,6 @@ func _on_player_2_won() -> void:
 	$PlayerWonLabel.text = "Player 2 is the Winner!"
 	$PlayerWonLabel.visible = true
 	$ResetButton.visible = false
-	$BackButton.visible = true
 	
 
 func _on_back_button_pressed() -> void:
