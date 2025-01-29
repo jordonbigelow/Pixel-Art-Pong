@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf143brtic3qp"]
+[gd_scene load_steps=6 format=3 uid="uid://cf143brtic3qp"]
 
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_p4xva"]
+
+[sub_resource type="Theme" id="Theme_t0l4h"]
+default_font_size = 54
+
+[sub_resource type="Theme" id="Theme_xapjb"]
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_ixa2i"]
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_y10mk"]
+default_font_size = 32
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
@@ -12,29 +24,55 @@ grow_vertical = 2
 script = ExtResource("1_p4xva")
 
 [node name="Play" type="Button" parent="."]
-layout_mode = 0
-offset_left = 540.0
-offset_top = 294.0
-offset_right = 624.0
-offset_bottom = 325.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -41.0
+offset_right = 130.5
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_t0l4h")
 text = "Play Pong
 "
 
-[node name="Settings" type="Button" parent="."]
-layout_mode = 0
-offset_left = 548.0
-offset_top = 346.0
-offset_right = 618.0
-offset_bottom = 377.0
-text = "Settings"
-
 [node name="Customize" type="Button" parent="."]
 layout_mode = 0
-offset_left = 525.0
-offset_top = 410.0
-offset_right = 645.0
-offset_bottom = 441.0
+offset_left = 330.0
+offset_top = 652.0
+offset_right = 500.0
+offset_bottom = 705.0
+theme = SubResource("Theme_xapjb")
 text = "Customize
 "
+
+[node name="HowToPlay" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -95.5
+offset_top = -69.0
+offset_right = 95.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_ixa2i")
+text = "How to Play"
+
+[node name="Settings" type="Button" parent="."]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 650.0
+offset_right = 913.0
+offset_bottom = 703.0
+theme = SubResource("Theme_y10mk")
+text = "Settings"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
