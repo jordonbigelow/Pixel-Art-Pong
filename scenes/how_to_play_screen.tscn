@@ -34,7 +34,7 @@ Player 1:
 
 Player 2:
 - (I) Paddle moves up
--(K) Paddle moves down"
+- (K) Paddle moves down"
 
 [node name="Rules" type="Label" parent="."]
 layout_mode = 0
