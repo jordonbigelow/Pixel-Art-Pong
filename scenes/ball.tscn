@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://fj4dgf41rbni"]
 
-[ext_resource type="Script" path="res://scripts/ball.gd" id="1_h7477"]
+[ext_resource type="Script" uid="uid://bkirwjf7qj7ka" path="res://scripts/ball.gd" id="1_h7477"]
 [ext_resource type="Texture2D" uid="uid://dt4sx53stnw68" path="res://assets/ball/ball.png" id="2_eshpd"]
 [ext_resource type="AudioStream" uid="uid://lx261ve066kq" path="res://assets/sound_effects/Level Up_2.wav" id="3_rl7uu"]
 

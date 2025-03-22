@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfmwmtcfngcle"]
 
-[ext_resource type="Script" path="res://scripts/paddle.gd" id="1_vikmw"]
+[ext_resource type="Script" uid="uid://bfoqxcd1yfnpb" path="res://scripts/paddle.gd" id="1_vikmw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2bqli"]
 radius = 2.0

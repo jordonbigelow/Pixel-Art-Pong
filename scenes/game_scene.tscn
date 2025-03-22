@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cm7uiog0in8pp"]
 
 [ext_resource type="PackedScene" uid="uid://cfmwmtcfngcle" path="res://scenes/paddle.tscn" id="1_xdxgb"]
-[ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_ys3ak"]
+[ext_resource type="Script" uid="uid://d4gfy74y7krok" path="res://scripts/game_scene.gd" id="1_ys3ak"]
 [ext_resource type="PackedScene" uid="uid://fj4dgf41rbni" path="res://scenes/ball.tscn" id="2_5aibe"]
 [ext_resource type="PackedScene" uid="uid://cpqd8cf4dsrwm" path="res://scenes/reset_timer.tscn" id="4_tu33m"]
 [ext_resource type="AudioStream" uid="uid://boquctxtocr5e" path="res://assets/sound_effects/Noise Crush_1.wav" id="5_ot0ib"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpqd8cf4dsrwm"]
 
-[ext_resource type="Script" path="res://scripts/reset_timer.gd" id="1_s1fsp"]
+[ext_resource type="Script" uid="uid://gvlw5hme2h45" path="res://scripts/reset_timer.gd" id="1_s1fsp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_eyts0"]
 font_size = 48

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlurqav2hq8gt"]
 
-[ext_resource type="Script" path="res://scripts/how_to_play_screen.gd" id="1_d2ll2"]
+[ext_resource type="Script" uid="uid://dm8v73el45c6h" path="res://scripts/how_to_play_screen.gd" id="1_d2ll2"]
 
 [sub_resource type="Theme" id="Theme_su1ip"]
 default_font_size = 28
