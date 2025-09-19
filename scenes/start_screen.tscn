@@ -44,6 +44,7 @@ text = "Play Pong
 "
 
 [node name="Customize" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 330.0
 offset_top = 652.0
@@ -70,6 +71,7 @@ theme = SubResource("Theme_ixa2i")
 text = "How to Play"
 
 [node name="Settings" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 781.0
 offset_top = 650.0
@@ -79,6 +81,7 @@ theme = SubResource("Theme_y10mk")
 text = "Settings"
 
 [node name="Exit" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1200.0
 offset_top = 16.0

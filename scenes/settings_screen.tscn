@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://vllrbkbm085r"]
+
+[ext_resource type="Script" uid="uid://b24ibm5wxyyh2" path="res://scripts/settings_screen.gd" id="1_assm4"]
+[ext_resource type="Script" uid="uid://b7sspk04il8iv" path="res://sound_effects_value.gd" id="1_srqes"]
+
+[node name="SettingsScreen" type="Node2D"]
+process_mode = 2
+script = ExtResource("1_assm4")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 445.0
+offset_top = 349.0
+offset_right = 764.0
+offset_bottom = 365.0
+value = 50.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 324.0
+offset_top = 345.0
+offset_right = 429.0
+offset_bottom = 368.0
+text = "Sound Effects"
+
+[node name="SoundEffectsValue" type="Label" parent="."]
+offset_left = 776.0
+offset_top = 345.0
+offset_right = 816.0
+offset_bottom = 368.0
+script = ExtResource("1_srqes")

@@ -1,14 +1,14 @@
 extends Node
 
+signal player_1_won
+signal player_2_won
+signal pause_button_pressed
+
 @onready var player_1_paddle: Sprite2D = $"Player 1 Paddle".get_child(0)
 @onready var player_2_paddle: Sprite2D = $"Player 2 Paddle".get_child(0)
 @onready var player_1_score: Label = $"Player 1 Score"
 @onready var player_2_score: Label = $"Player 2 Score"
-
 @onready var start_screen: PackedScene = load("res://scenes/start_screen.tscn")
-
-signal player_1_won
-signal player_2_won
 
 
 func _ready() -> void:
@@ -21,8 +21,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	player_1_score.text = str(Globals.player_1_score)
 	player_2_score.text = str(Globals.player_2_score)
-
-
+	
+	if Input.is_action_pressed("pause_game"):
+		pause_button_pressed.emit()
+		
+		
 func _on_reset_button_pressed() -> void:
 	$ResetTimer.reset_timer()
 		
@@ -53,8 +56,8 @@ func _on_player_two_back_wall_body_entered(body: Node2D) -> void:
 	
 func play_scored_sound() -> void:
 	$PlayerScored.play(1.20)
-	
-	
+
+
 func check_if_player_won(p1_score: int, p2_score: int) -> bool:
 	if p1_score >= Globals.MAX_SCORE and p1_score > p2_score + 1:
 		return true
@@ -86,3 +89,11 @@ func _on_back_button_pressed() -> void:
 func reset_player_scores() -> void:
 	Globals.player_1_score = 0
 	Globals.player_2_score = 0
+	
+	
+func _on_pause_button_pressed() -> void:
+	if get_tree().is_paused():
+		get_tree().paused = false
+	else:
+		get_tree().paused = true 
+		

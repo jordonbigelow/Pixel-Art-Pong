@@ -1,11 +1,13 @@
 extends RigidBody2D
 
 @export var speed: float = 250
+
 var velocity: Vector2
 
 
 func _ready() -> void:
 	velocity = Vector2(-speed, randi_range(100, 150))
+	process_mode =  Node.PROCESS_MODE_PAUSABLE
 	
 	
 func _physics_process(delta: float) -> void:

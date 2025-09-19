@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cm7uiog0in8pp"]
+[gd_scene load_steps=13 format=3 uid="uid://cm7uiog0in8pp"]
 
 [ext_resource type="PackedScene" uid="uid://cfmwmtcfngcle" path="res://scenes/paddle.tscn" id="1_xdxgb"]
 [ext_resource type="Script" uid="uid://d4gfy74y7krok" path="res://scripts/game_scene.gd" id="1_ys3ak"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cpqd8cf4dsrwm" path="res://scenes/reset_timer.tscn" id="4_tu33m"]
 [ext_resource type="AudioStream" uid="uid://boquctxtocr5e" path="res://assets/sound_effects/Noise Crush_1.wav" id="5_ot0ib"]
 [ext_resource type="AudioStream" uid="uid://r3en4g613ef5" path="res://assets/sound_effects/Whimsical Tines Improv_1.wav" id="6_g41lw"]
+[ext_resource type="PackedScene" uid="uid://vllrbkbm085r" path="res://scenes/settings_screen.tscn" id="7_kk2rg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mix4f"]
 font_size = 48
@@ -117,6 +118,11 @@ offset_right = 171.0
 offset_bottom = 687.0
 text = "Back to Start Screen"
 
+[node name="SettingsScreen" parent="." instance=ExtResource("7_kk2rg")]
+visible = false
+
+[connection signal="pause_button_pressed" from="." to="." method="_on_pause_button_pressed"]
+[connection signal="pause_button_pressed" from="." to="SettingsScreen" method="_on_game_scene_pause_button_pressed"]
 [connection signal="player_1_won" from="." to="." method="_on_player_1_won"]
 [connection signal="player_2_won" from="." to="." method="_on_player_2_won"]
 [connection signal="body_entered" from="PlayerOneBackWall" to="." method="_on_player_one_back_wall_body_entered"]
