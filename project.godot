@@ -13,7 +13,7 @@ config_version=5
 config/name="Pixel Art Pong"
 config/tags=PackedStringArray("physics_based")
 run/main_scene="res://scenes/start_screen.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
